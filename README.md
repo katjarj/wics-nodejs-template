@@ -13,24 +13,24 @@ A ready-to-use boilerplate for hackathon projects using Next.js (Node.js framewo
 ### Installation
 
 1. **Clone or download this repository**
-   \`\`\`bash
+   ```bash
    git clone <your-repo-url>
    cd hackathon-boilerplate
-   \`\`\`
+   ```
 
 2. **Install dependencies**
-   \`\`\`bash
+   ```bash
    npm install
    # or
    yarn install
-   \`\`\`
+   ```
 
 3. **Run the development server**
-   \`\`\`bash
+   ```bash
    npm run dev
    # or
    yarn dev
-   \`\`\`
+   ```
 
 4. **Open your browser**
    
@@ -38,7 +38,7 @@ A ready-to-use boilerplate for hackathon projects using Next.js (Node.js framewo
 
 ## 📁 Project Structure
 
-\`\`\`
+```
 hackathon-boilerplate/
 ├── app/                    # Application pages and routes
 │   ├── page.tsx           # Home page (/)
@@ -52,7 +52,7 @@ hackathon-boilerplate/
 │   └── utils.ts          # Helper functions
 ├── public/               # Static files (images, fonts, etc.)
 └── README.md             # This file!
-\`\`\`
+```
 
 ## 🎨 Using Tailwind CSS
 
@@ -60,7 +60,7 @@ Tailwind CSS is a utility-first CSS framework. Instead of writing custom CSS, yo
 
 ### Basic Examples
 
-\`\`\`tsx
+```tsx
 // Button with Tailwind classes
 <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
   Click Me
@@ -76,7 +76,7 @@ Tailwind CSS is a utility-first CSS framework. Instead of writing custom CSS, yo
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
   {/* Items will be 1 column on mobile, 2 on tablet, 3 on desktop */}
 </div>
-\`\`\`
+```
 
 ### Common Tailwind Classes
 
@@ -94,7 +94,7 @@ Tailwind CSS is a utility-first CSS framework. Instead of writing custom CSS, yo
 
 Create a new folder in the `app/` directory:
 
-\`\`\`tsx
+```tsx
 // app/projects/page.tsx
 export default function ProjectsPage() {
   return (
@@ -104,7 +104,7 @@ export default function ProjectsPage() {
     </div>
   )
 }
-\`\`\`
+```
 
 This automatically creates a route at `/projects`
 
@@ -112,7 +112,7 @@ This automatically creates a route at `/projects`
 
 Create reusable components in the `components/` folder:
 
-\`\`\`tsx
+```tsx
 // components/project-card.tsx
 export function ProjectCard({ title, description }: { title: string; description: string }) {
   return (
@@ -122,23 +122,23 @@ export function ProjectCard({ title, description }: { title: string; description
     </div>
   )
 }
-\`\`\`
+```
 
 Use it in your pages:
 
-\`\`\`tsx
+```tsx
 import { ProjectCard } from '@/components/project-card'
 
 export default function Page() {
   return <ProjectCard title="My Project" description="Description here" />
 }
-\`\`\`
+```
 
 ### 3. Adding Interactivity
 
 Use React hooks for interactive features:
 
-\`\`\`tsx
+```tsx
 'use client' // Add this for client-side interactivity
 
 import { useState } from 'react'
@@ -158,13 +158,13 @@ export default function Counter() {
     </div>
   )
 }
-\`\`\`
+```
 
 ### 4. Fetching Data
 
 Fetch data from APIs:
 
-\`\`\`tsx
+```tsx
 // Server Component (default)
 export default async function DataPage() {
   const res = await fetch('https://api.example.com/data')
@@ -188,13 +188,13 @@ export default function ClientDataPage() {
   
   return <div>{/* Display your data */}</div>
 }
-\`\`\`
+```
 
 ### 5. Adding API Routes
 
 Create API endpoints in `app/api/`:
 
-\`\`\`tsx
+```tsx
 // app/api/hello/route.ts
 export async function GET() {
   return Response.json({ message: 'Hello from API!' })
@@ -205,7 +205,7 @@ export async function POST(request: Request) {
   // Process the data
   return Response.json({ success: true })
 }
-\`\`\`
+```
 
 Access at: `http://localhost:3000/api/hello`
 
@@ -221,23 +221,23 @@ Access at: `http://localhost:3000/api/hello`
 
 Create a `.env.local` file:
 
-\`\`\`
+```
 NEXT_PUBLIC_API_KEY=your_api_key_here
 DATABASE_URL=your_database_url
-\`\`\`
+```
 
 Use in your code:
 
-\`\`\`tsx
+```tsx
 const apiKey = process.env.NEXT_PUBLIC_API_KEY // Client-side
 const dbUrl = process.env.DATABASE_URL // Server-side only
-\`\`\`
+```
 
 ## 📦 Useful Packages
 
 Install additional packages as needed:
 
-\`\`\`bash
+```bash
 ### Icons
 npm install lucide-react
 
@@ -249,7 +249,7 @@ npm install axios
 
 ### Date handling
 npm install date-fns
-\`\`\`
+```
 
 ## 🚢 Deployment
 
@@ -272,24 +272,24 @@ Your app will be live in minutes!
 ## 🆘 Common Issues
 
 **Port already in use?**
-\`\`\`bash
+```bash
 ### Kill the process on port 3000
 npx kill-port 3000
-\`\`\`
+```
 
 **Styles not updating?**
-\`\`\`bash
+```bash
 ### Clear Next.js cache
 rm -rf .next
 npm run dev
-\`\`\`
+```
 
 **Module not found?**
-\`\`\`bash
+```bash
 ### Reinstall dependencies
 rm -rf node_modules
 npm install
-\`\`\`
+```
 
 ## 🎉 Good Luck!
 
